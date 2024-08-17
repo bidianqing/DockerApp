@@ -22,5 +22,3 @@ jobs:
       run: docker tag dockerapp:$(date +%s) bidianqing/dockerapp:$(date +%s)
     - name: Docker Images
       run: docker images
-    - name: Login Docker Hub
-      run: docker login -u bidianqing
