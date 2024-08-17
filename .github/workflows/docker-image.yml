@@ -18,6 +18,7 @@ jobs:
       run: dotnet publish ./DockerApp/DockerApp.csproj -c Release
     - name: Build the Docker image
       run: docker build -f ./DockerApp/bin/Release/net8.0/publish/Dockerfile -t dockerapp:$(date +%s) ./DockerApp/bin/Release/net8.0/publish
+    - name: docker tag dockerapp:$(date +%s) bidianqing/dockerapp:$(date +%s)
     - name: Docker Images
       run: docker images
     - name: Login Docker Hub
