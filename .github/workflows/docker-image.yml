@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: dotnet publish ./DockerApp/DockerApp.csproj -c Release && docker build  --file ./bin/Release/net8.0/publish/Dockerfile --tag my-image-name:$(date +%s) ./bin/Release/net8.0/publish
+      run: dotnet publish ./DockerApp/DockerApp.csproj -c Release
